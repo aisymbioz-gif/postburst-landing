@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PostBurst — AI content generator for social media. Get 10 ready-to-post texts for Instagram, Telegram, Twitter and Reels in seconds. Free." />
-  <meta name="keywords" content="AI content generator, social media posts, Instagram captions, Telegram bot, AI writing, content creation" />
-  <meta property="og:title" content="PostBurst — AI Content Generator" />
-  <meta property="og:description" content="One topic → 10 ready posts for Instagram, Telegram, Twitter & Reels. Free, in seconds." />
+  <meta name="description" content="PostBurst — AI Telegram bot that turns one topic into 10 ready-to-post texts for Instagram, Telegram, Twitter & Reels in 10 seconds. Free." />
+  <meta name="keywords" content="AI content generator, social media posts, Instagram captions, Telegram bot, AI writing, content creation, SMM tool" />
+  <meta property="og:title" content="PostBurst — 1 Topic → 10 Posts in 10 Seconds" />
+  <meta property="og:description" content="AI Telegram bot for content creators. Type a topic, get 10 platform-ready posts instantly. Free, no signup." />
   <meta property="og:type" content="website" />
-  <title>PostBurst — AI Content Generator for Social Media</title>
+  <title>PostBurst — 1 Topic → 10 Posts in 10 Seconds</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -16,6 +16,7 @@
       --purple: #7C3AED;
       --purple-light: #A78BFA;
       --purple-dark: #5B21B6;
+      --green: #10B981;
       --bg: #0F0A1E;
       --bg2: #1A1035;
       --text: #F8F8FF;
@@ -68,16 +69,16 @@
     /* HERO */
     .hero {
       text-align: center;
-      padding: 100px 20px 80px;
+      padding: 80px 20px 60px;
       max-width: 800px;
       margin: 0 auto;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(124, 58, 237, 0.2);
-      border: 1px solid rgba(124, 58, 237, 0.4);
-      color: var(--purple-light);
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--green);
       padding: 6px 16px;
       border-radius: 100px;
       font-size: 0.85rem;
@@ -99,9 +100,9 @@
     }
 
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--muted);
-      max-width: 560px;
+      max-width: 540px;
       margin: 0 auto 40px;
     }
 
@@ -133,7 +134,84 @@
       font-size: 0.9rem;
     }
 
-    /* HOW IT WORKS */
+    /* DEMO */
+    .demo-section {
+      padding: 40px 20px 80px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .demo-chat {
+      background: #0E1621;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 1px solid #1C2736;
+    }
+
+    .demo-header {
+      background: #17212B;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #1C2736;
+    }
+
+    .demo-avatar {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--purple), #4F46E5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .demo-name { font-weight: 600; font-size: 0.95rem; }
+    .demo-status { font-size: 0.75rem; color: var(--green); }
+
+    .demo-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .msg {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .msg-user {
+      background: #2B5278;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .msg-bot {
+      background: #182533;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .msg-bot strong { color: var(--purple-light); }
+    .msg-time { font-size: 0.7rem; color: #5A6F82; margin-top: 4px; text-align: right; }
+
+    .msg-bot .post-block {
+      background: rgba(124, 58, 237, 0.1);
+      border-left: 3px solid var(--purple);
+      padding: 8px 10px;
+      margin: 8px 0 4px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+    }
+
+    /* SECTION */
     .section {
       padding: 80px 20px;
       max-width: 1000px;
@@ -157,6 +235,28 @@
       margin-bottom: 60px;
     }
 
+    /* PAIN POINTS */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pain-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .pain-card .before { color: #EF4444; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .pain-card .after { color: var(--green); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .pain-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 6px; }
+    .pain-card p { color: var(--muted); font-size: 0.9rem; }
+
+    /* STEPS */
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -168,7 +268,6 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 32px;
-      position: relative;
     }
 
     .step-num {
@@ -186,28 +285,6 @@
 
     .step h3 { font-size: 1.1rem; margin-bottom: 8px; }
     .step p { color: var(--muted); font-size: 0.95rem; }
-
-    /* FEATURES */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .feature {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px;
-    }
-
-    .feature-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-
-    .feature h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-    .feature p { color: var(--muted); font-size: 0.9rem; }
 
     /* PLATFORMS */
     .platforms {
@@ -238,24 +315,23 @@
       font-weight: 600;
     }
 
-    /* NICHES */
-    .niches {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 30px;
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
-    .niche {
-      background: rgba(124, 58, 237, 0.15);
-      border: 1px solid rgba(124, 58, 237, 0.3);
-      color: var(--purple-light);
-      border-radius: 100px;
-      padding: 8px 18px;
-      font-size: 0.9rem;
-      font-weight: 600;
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
     }
+
+    .feature-icon { font-size: 2rem; margin-bottom: 12px; }
+    .feature h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .feature p { color: var(--muted); font-size: 0.9rem; }
 
     /* PRICING */
     .pricing-cards {
@@ -285,7 +361,7 @@
     .price-card ul { list-style: none; text-align: left; }
     .price-card ul li { padding: 8px 0; font-size: 0.95rem; border-bottom: 1px solid var(--border); }
     .price-card ul li:last-child { border: none; }
-    .price-card ul li::before { content: "✓ "; color: var(--purple-light); font-weight: 700; }
+    .price-card ul li::before { content: "\2713  "; color: var(--purple-light); font-weight: 700; }
 
     /* CTA SECTION */
     .cta-section {
@@ -294,10 +370,8 @@
       border-radius: 24px;
       padding: 80px 40px;
       text-align: center;
-      margin: 80px 20px;
+      margin: 80px auto;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .cta-section h2 { margin-bottom: 16px; }
@@ -316,7 +390,9 @@
 
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
-      .hero { padding: 60px 20px; }
+      .hero { padding: 60px 20px 40px; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .demo-section { padding: 20px 16px 60px; }
     }
   </style>
 </head>
@@ -324,43 +400,99 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">⚡ PostBurst</div>
-  <a href="https://t.me/PostBurstBot" class="nav-cta">Try Free →</a>
+  <div class="logo">PostBurst</div>
+  <a href="https://t.me/PostBurstBot" class="nav-cta">Try Free</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="badge">🤖 AI-Powered Content Generator</div>
-  <h1>One topic.<br><span>10 ready posts.</span><br>In seconds.</h1>
+  <div class="badge">Free &middot; No signup &middot; Works in Telegram</div>
+  <h1>Stop writing posts.<br><span>Let AI write 10 at once.</span></h1>
   <p class="subtitle">
-    PostBurst generates social media content for Instagram, Telegram, Twitter and Reels — instantly, using AI. Free, no signup required.
+    Type one topic in Telegram &mdash; get 10 ready-to-publish posts for Instagram, Twitter, Telegram & Reels. In 10 seconds. Free.
   </p>
   <a href="https://t.me/PostBurstBot" class="hero-cta">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-    Open in Telegram
+    Open @PostBurstBot
   </a>
-  <span class="free-tag">✓ 5 free generations per day &nbsp;·&nbsp; No signup &nbsp;·&nbsp; No credit card</span>
+  <span class="free-tag">5 free generations/day &middot; No credit card &middot; No email</span>
+</section>
+
+<!-- DEMO: Telegram chat mockup -->
+<section class="demo-section">
+  <div class="demo-chat">
+    <div class="demo-header">
+      <div class="demo-avatar">P</div>
+      <div>
+        <div class="demo-name">PostBurst Bot</div>
+        <div class="demo-status">online</div>
+      </div>
+    </div>
+    <div class="demo-body">
+      <div class="msg msg-user">
+        morning routines for productivity
+        <div class="msg-time">10:32</div>
+      </div>
+      <div class="msg msg-bot">
+        <strong>Instagram caption:</strong>
+        <div class="post-block">Your morning sets the tone for everything. Here's what changed my life: 5:30 wake up, no phone for 30 min, 10 min journaling, cold shower. Try it for 7 days. You won't go back.</div>
+        <strong>Twitter thread:</strong>
+        <div class="post-block">Morning routines that actually work (no 4AM nonsense):<br><br>1/ Skip the alarm snooze. Just sit up. The hardest part is over.<br>2/ Write 3 things you'll accomplish today...</div>
+        <strong>Reels script:</strong>
+        <div class="post-block">[Hook] "This 5-minute morning routine replaced my 2-hour one"<br>[Body] Show: alarm off &rarr; journal &rarr; water &rarr; walk...</div>
+        <div class="msg-time">10:32 &middot; +8 more posts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN → SOLUTION -->
+<section class="section" style="padding-top: 20px;">
+  <div class="section-label">The problem</div>
+  <h2>Content takes too long</h2>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <div class="before">Without PostBurst</div>
+      <h3>2-4 hours</h3>
+      <p>Writing, rewriting, adapting for each platform. Every. Single. Day.</p>
+    </div>
+    <div class="pain-card">
+      <div class="after">With PostBurst</div>
+      <h3>10 seconds</h3>
+      <p>One topic, 10 posts, all platforms. Copy, paste, done.</p>
+    </div>
+    <div class="pain-card">
+      <div class="before">Without PostBurst</div>
+      <h3>Writer's block</h3>
+      <p>Staring at a blank screen. What to write? What angle? What hook?</p>
+    </div>
+    <div class="pain-card">
+      <div class="after">With PostBurst</div>
+      <h3>Endless ideas</h3>
+      <p>AI generates hooks, angles, and formats you wouldn't think of.</p>
+    </div>
+  </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="section">
   <div class="section-label">How it works</div>
-  <h2>3 steps to ready content</h2>
+  <h2>3 steps. 10 seconds. Done.</h2>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <h3>Send a topic</h3>
-      <p>Type any topic — "morning routines", "productivity hacks", "healthy recipes" — whatever you need content about.</p>
+      <h3>Open @PostBurstBot in Telegram</h3>
+      <p>No signup, no app to download. Just open the bot and hit Start.</p>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <h3>AI generates 10 posts</h3>
-      <p>In under 10 seconds, PostBurst creates 10 platform-specific texts tailored for your niche and audience.</p>
+      <h3>Send any topic</h3>
+      <p>"Healthy breakfast ideas", "startup tips", "travel hacks" &mdash; anything works.</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <h3>Copy & publish</h3>
-      <p>Copy the texts you like and post them directly. No editing needed — they're ready to publish as-is.</p>
+      <h3>Get 10 ready posts</h3>
+      <p>Instagram caption, Twitter thread, Telegram post, Reels script &mdash; all formatted and ready to publish.</p>
     </div>
   </div>
 </section>
@@ -371,61 +503,38 @@
     <div class="section-label">Output formats</div>
     <h2>Content for every platform</h2>
     <div class="platform-tags">
-      <div class="tag">📸 Instagram captions</div>
-      <div class="tag">✈️ Telegram posts</div>
-      <div class="tag">🐦 Twitter / X threads</div>
-      <div class="tag">🎬 Reels scripts</div>
-      <div class="tag">🎵 TikTok scripts</div>
-    </div>
-
-    <div style="margin-top: 60px;">
-      <div class="section-label">Available niches</div>
-      <h2>Pick your niche</h2>
-      <div class="niches">
-        <div class="niche">💪 Fitness</div>
-        <div class="niche">💼 Business</div>
-        <div class="niche">✨ Lifestyle</div>
-        <div class="niche">🍕 Food</div>
-        <div class="niche">💻 Technology</div>
-      </div>
+      <div class="tag">Instagram captions</div>
+      <div class="tag">Telegram posts</div>
+      <div class="tag">Twitter / X threads</div>
+      <div class="tag">Reels & TikTok scripts</div>
     </div>
   </div>
 </div>
 
 <!-- FEATURES -->
 <section class="section">
-  <div class="section-label">Features</div>
-  <h2>Everything you need</h2>
+  <div class="section-label">Why PostBurst</div>
+  <h2>Built for content creators</h2>
   <div class="features-grid">
     <div class="feature">
-      <div class="feature-icon">⚡</div>
-      <h3>Instant generation</h3>
-      <p>10 posts ready in under 10 seconds. No waiting, no loading screens.</p>
+      <div class="feature-icon">10s</div>
+      <h3>10-second generation</h3>
+      <p>Type a topic, get 10 posts. Faster than opening ChatGPT and writing a prompt.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">🌍</div>
-      <h3>Bilingual</h3>
-      <p>Write in Russian or English — the bot auto-detects and responds in your language.</p>
+      <div class="feature-icon">RU/EN</div>
+      <h3>Russian & English</h3>
+      <p>Write in any language. The bot auto-detects and responds accordingly.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">🎯</div>
-      <h3>Platform-optimized</h3>
-      <p>Each text is formatted specifically for Instagram, Telegram, Twitter or Reels.</p>
+      <div class="feature-icon">0</div>
+      <h3>Zero setup</h3>
+      <p>No account. No app. No API key. Just open Telegram and type.</p>
     </div>
     <div class="feature">
-      <div class="feature-icon">🔄</div>
-      <h3>Daily channel</h3>
-      <p>Follow @generator2026 for free AI-generated content examples every day.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">🔒</div>
-      <h3>No signup needed</h3>
-      <p>Just open Telegram and start. No registration, no email required.</p>
-    </div>
-    <div class="feature">
-      <div class="feature-icon">💳</div>
-      <h3>Pay with Telegram Stars</h3>
-      <p>Upgrade to unlimited using native Telegram payments. No external billing.</p>
+      <div class="feature-icon">$0</div>
+      <h3>Actually free</h3>
+      <p>5 generations per day. No trial period. No "free for 7 days". Free forever.</p>
     </div>
   </div>
 </section>
@@ -433,58 +542,46 @@
 <!-- PRICING -->
 <section class="section" style="padding-top: 0;">
   <div class="section-label">Pricing</div>
-  <h2>Simple & transparent</h2>
-  <div class="pricing-cards" style="max-width:960px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+  <h2>Simple. Honest. No tricks.</h2>
+  <div class="pricing-cards">
     <div class="price-card">
       <div class="plan">Free</div>
       <div class="price">$0</div>
       <div class="period">forever</div>
       <ul>
         <li>5 generations per day</li>
-        <li>All 5 niches</li>
-        <li>All platforms</li>
+        <li>All platforms included</li>
         <li>RU + EN support</li>
+        <li>No signup needed</li>
       </ul>
     </div>
     <div class="price-card featured">
-      <div class="plan">⭐ Basic</div>
-      <div class="price">$5</div>
-      <div class="period">/ month via Telegram Stars</div>
-      <ul>
-        <li>50 generations per day</li>
-        <li>Niche templates</li>
-        <li>All platforms</li>
-        <li>Priority support</li>
-      </ul>
-    </div>
-    <div class="price-card">
-      <div class="plan">🚀 Pro</div>
-      <div class="price">$15</div>
-      <div class="period">/ month via Telegram Stars</div>
+      <div class="plan">Unlimited</div>
+      <div class="price">$1</div>
+      <div class="period">one-time via Telegram Stars</div>
       <ul>
         <li>Unlimited generations</li>
-        <li>All formats & niches</li>
-        <li>Priority generation</li>
-        <li>Advanced templates</li>
+        <li>Priority speed</li>
+        <li>All platforms included</li>
+        <li>Pay inside Telegram</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <div class="cta-section">
-  <h2>Start creating content now</h2>
-  <p>Save hours on content creation every week with PostBurst. Free to start, no signup required.</p>
+  <h2>Try it right now</h2>
+  <p>Open the bot. Type a topic. See 10 posts in 10 seconds. If it's not useful &mdash; close it. No strings attached.</p>
   <a href="https://t.me/PostBurstBot" class="hero-cta">
     <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-    Try PostBurst Free
+    Open @PostBurstBot
   </a>
-  <p style="margin-top:16px; margin-bottom:0; font-size:0.9rem;">Also follow the examples channel: <a href="https://t.me/generator2026" style="color:var(--purple-light)">@generator2026</a></p>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 PostBurst &nbsp;·&nbsp; <a href="https://t.me/PostBurstBot">@PostBurstBot</a> &nbsp;·&nbsp; <a href="https://t.me/generator2026">@generator2026</a></p>
+  <p>&copy; 2026 PostBurst &middot; <a href="https://t.me/PostBurstBot">@PostBurstBot</a> &middot; Built with Claude AI</p>
 </footer>
 
 </body>
